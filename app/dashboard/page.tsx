@@ -87,6 +87,9 @@ export default function DashboardPage() {
     }
   }
 
+useEffect(() => {
+  fetchLinks();
+}, [fetchLinks]);
 
   const handleUpgradeToPremium = async (linkId: string) => {
   const confirmed = window.confirm(

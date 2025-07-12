@@ -1,7 +1,7 @@
 import './globals.css'
 import { createClient } from '@/lib/supabase'
 import { SupabaseProvider } from '@/components/supabase-provider'
-import { cookies } from 'next/headers'
+
 
 export const metadata = {
   title: 'Keytune',

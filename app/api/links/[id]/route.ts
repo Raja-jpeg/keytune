@@ -1,10 +1,11 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(request: NextRequest, { params }: { params: { id: string } }) {
-  const linkId = params.id;
+export async function GET(
+  req: NextRequest,
+  context: { params: { id: string } }
+) {
+  const { id } = context.params;
 
-  // TODO: Fetch link data from Supabase using linkId
-
-  return NextResponse.json({ message: `Link ID: ${linkId}` });
+  // Example: fetch link data by ID
+  return NextResponse.json({ message: `Link ID is ${id}` });
 }
